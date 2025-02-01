@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Validation Project</title>
+    <script src="jquery.js" defer></script>
+    <script src="./main.js" defer></script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        box-sizing: border-box;
+      }
+
+      form {
+        max-width: 500px;
+        margin: 2rem auto;
+      }
+
+      .input_group {
+        display: grid;
+        grid-template-columns: 1fr 1.5fr;
+        align-items: center;
+        margin-bottom: 1rem;
+      }
+
+      .submit_btn {
+        margin-left: 200px;
+      }
+
+      label {
+        font-size: 1.35rem;
+      }
+
+      input {
+        padding: 1rem;
+        border-radius: 5px;
+        font-size: 1.15rem;
+      }
+
+      #errors {
+        color: crimson;
+        font-size: 1.25rem;
+        padding: 0.65rem 1rem;
+      }
+
+      #success {
+        color: green;
+        font-size: 1.25rem;
+        padding: 0.65rem 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="errors"></div>
+    <div id="success"></div>
+    <form>
+      <div class="input_group">
+        <label for="email">Email</label>
+        <input type="text" name="email" id="email" />
+      </div>
+      <div class="input_group">
+        <label for="phone-no">Phone-Number</label>
+        <input type="phone" name="phone-no" id="phone-no" />
+      </div>
+      <div class="input_group">
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password" />
+      </div>
+      <div class="input_group">
+        <label for="confirmPassword">Confirm-Password</label>
+        <input type="password" name="confirmPassword" id="confirmPassword" />
+      </div>
+      <div class="input_group submit_btn">
+        <input type="submit" value="Submit" id="submit_btn" />
+      </div>
+    </form>
+  </body>
+</html>
